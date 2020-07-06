@@ -13,6 +13,7 @@ foreach( OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES} )
 endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
 
 add_subdirectory(sc-python)
+add_subdirectory(wikiparser)
 add_subdirectory(sc-ui)
 add_subdirectory(sc-search)
 add_subdirectory(sc-utils)

@@ -1,5 +1,7 @@
 import threading
 import functools
+from wikiparser.TranslatorAgent import TranslatorAgent
+
 
 from sc import *
 
@@ -23,6 +25,8 @@ class Keynodes:
 
   NrelMimeType = 'nrel_mimetype'
   NrelFormat = 'nrel_format'
+  kHello = TranslatorAgent.kHello
+  kWorld = TranslatorAgent.kWorld
 
   @staticmethod
   @synchronized(keynodesLock)
@@ -37,7 +41,9 @@ class Keynodes:
   def Init(ctx):
     keynodesList = [
         Keynodes.NrelMimeType,
-        Keynodes.NrelFormat
+        Keynodes.NrelFormat,
+        Keynodes.kHello,
+        Keynodes.kWorld,
     ]
 
     for k in keynodesList:
